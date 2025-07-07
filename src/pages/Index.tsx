@@ -31,7 +31,11 @@ const Index = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center">
-                <Icon name="Zap" className="w-6 h-6 text-white" />
+                <Icon
+                  name="Zap"
+                  className="w-6 h-6 text-white"
+                  fallback="Circle"
+                />
               </div>
               <h1 className="text-2xl font-bold text-gray-900">
                 30 дней свободы
@@ -39,11 +43,15 @@ const Index = () => {
             </div>
             <div className="flex items-center space-x-4">
               <Button variant="outline" size="sm">
-                <Icon name="LifeBuoy" className="w-4 h-4 mr-2" />
+                <Icon
+                  name="LifeBuoy"
+                  className="w-4 h-4 mr-2"
+                  fallback="Circle"
+                />
                 SOS-помощь
               </Button>
               <Button size="sm">
-                <Icon name="User" className="w-4 h-4 mr-2" />
+                <Icon name="User" className="w-4 h-4 mr-2" fallback="Circle" />
                 Профиль
               </Button>
             </div>
@@ -63,11 +71,15 @@ const Index = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-              <Icon name="Play" className="w-5 h-5 mr-2" />
+              <Icon name="Play" className="w-5 h-5 mr-2" fallback="Circle" />
               Начать программу
             </Button>
             <Button variant="outline" size="lg">
-              <Icon name="FileText" className="w-5 h-5 mr-2" />
+              <Icon
+                name="FileText"
+                className="w-5 h-5 mr-2"
+                fallback="Circle"
+              />
               Пройти тест
             </Button>
           </div>
@@ -81,7 +93,11 @@ const Index = () => {
           <Card className="lg:col-span-2">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Icon name="TreePine" className="w-6 h-6 text-green-600" />
+                <Icon
+                  name="TreePine"
+                  className="w-6 h-6 text-green-600"
+                  fallback="Circle"
+                />
                 Дерево роста
               </CardTitle>
               <CardDescription>
@@ -140,7 +156,11 @@ const Index = () => {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Icon name="BarChart3" className="w-6 h-6 text-blue-600" />
+                <Icon
+                  name="BarChart3"
+                  className="w-6 h-6 text-blue-600"
+                  fallback="Circle"
+                />
                 Сегодняшние показатели
               </CardTitle>
             </CardHeader>
@@ -154,6 +174,7 @@ const Index = () => {
                         key={i}
                         name="Star"
                         className={`w-4 h-4 ${i <= 4 ? "text-yellow-400 fill-current" : "text-gray-300"}`}
+                        fallback="Circle"
                       />
                     ))}
                   </div>
@@ -186,7 +207,11 @@ const Index = () => {
 
               <div className="pt-4 border-t">
                 <Button className="w-full" size="sm">
-                  <Icon name="Plus" className="w-4 h-4 mr-2" />
+                  <Icon
+                    name="Plus"
+                    className="w-4 h-4 mr-2"
+                    fallback="Circle"
+                  />
                   Обновить показатели
                 </Button>
               </div>
@@ -200,7 +225,11 @@ const Index = () => {
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <Icon name="Trophy" className="w-6 h-6 text-yellow-600" />
+              <Icon
+                name="Trophy"
+                className="w-6 h-6 text-yellow-600"
+                fallback="Circle"
+              />
               Достижения
             </CardTitle>
             <CardDescription>
@@ -226,9 +255,14 @@ const Index = () => {
                           ? "text-green-600"
                           : "text-gray-400"
                       }`}
+                      fallback="Circle"
                     />
                     {achievement.completed && (
-                      <Icon name="Check" className="w-5 h-5 text-green-600" />
+                      <Icon
+                        name="Check"
+                        className="w-5 h-5 text-green-600"
+                        fallback="Circle"
+                      />
                     )}
                   </div>
                   <h3 className="font-semibold text-sm text-gray-900">
@@ -249,6 +283,7 @@ const Index = () => {
               <Icon
                 name="Calendar"
                 className="w-12 h-12 text-blue-600 mx-auto mb-4"
+                fallback="Circle"
               />
               <h3 className="font-semibold text-lg mb-2">
                 Сегодняшнее задание
@@ -267,6 +302,7 @@ const Index = () => {
               <Icon
                 name="BookOpen"
                 className="w-12 h-12 text-green-600 mx-auto mb-4"
+                fallback="Circle"
               />
               <h3 className="font-semibold text-lg mb-2">База знаний</h3>
               <p className="text-gray-600 text-sm mb-4">
@@ -283,6 +319,7 @@ const Index = () => {
               <Icon
                 name="AlertCircle"
                 className="w-12 h-12 text-red-600 mx-auto mb-4"
+                fallback="Circle"
               />
               <h3 className="font-semibold text-lg mb-2">Экстренная помощь</h3>
               <p className="text-gray-600 text-sm mb-4">
